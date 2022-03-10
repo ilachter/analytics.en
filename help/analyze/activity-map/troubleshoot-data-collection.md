@@ -28,4 +28,5 @@ Check each of the following to make sure Activity Map components are present:
 * **The `s_sq` cookie**: Activity Map depends on the `s_sq` cookie for data collection.
   * Make sure that the `cookieDomainPeriods` variable is correctly set, especially for regional domains such as `*.co.uk` or `*.co.jp`.
   * Make sure that the `linkInternalFilters` variable is set to desired values. If a clicked link does not match internal filters, Activity Map considers it an exit link and does not collect data.
+* **There is only one `s_sq` cookie**: It is possible `s_sq` cookie might be set on `domain` and `subdomain.domain` - this is possible if you have `abcxyz.com` and `qa.abcxyz.com`. In this case - delete all `s_sq` cookies.
 * **Activity Map overlay running**: AppMeasurement does not track click data for your web page when the Activity Map overlay is enabled.
